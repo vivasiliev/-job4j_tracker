@@ -57,6 +57,20 @@ public class Tracker {
         return rls;
     }
 
+    public boolean delete(int id) {
+        boolean rsl = false;
+        int index = indexOf(id);
+        int start = index + 1;
+        int length = size - index - 1;
+        if (index != -1) {
+            System.arraycopy(items, start, items, index, length);
+            items[size - 1] = null;
+            size--;
+            rsl = true;
+        }
+        return rsl;
+    }
+
     public static void main(String[] args) {
         Tracker tracker = new Tracker();
         Item first = new Item("First");
