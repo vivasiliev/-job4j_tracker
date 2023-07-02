@@ -8,6 +8,7 @@ public class College {
         student.setFio("Ivanov Ivan Ivanovich");
         student.setGroup("R108");
         student.setDate(new Date());
-        System.out.println(student.getFio() + "\n" + student.getGroup() + "\n" + student.getDate());
+        String ln = System.lineSeparator();
+        System.out.println(student.getFio() + ln + student.getGroup() + ln + student.getDate());
     }
 }
